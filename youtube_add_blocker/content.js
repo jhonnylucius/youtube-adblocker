@@ -1,11 +1,9 @@
-function removeAllAds() {
+function removeAdOverlays() {
     const adSelectors = [
         '.ytp-ad-module',
-        '.video-ads',
-        '.ytp-ad-player-overlay',
         '.ytp-ad-overlay-slot',
+        '.ytp-ad-player-overlay',
         '.ytp-ad-skip-button',
-        '#player-ads',
         '.ytp-ad-image-overlay',
         '.ytp-ad-overlay-container',
         '.ytp-ad-progress-list',
@@ -17,15 +15,8 @@ function removeAllAds() {
         '.ytp-ad-feedback-dialog',
         '.ytp-ad-player-overlay-instream-info',
         '.ytp-ad-click-overlay',
-        'ytd-promoted-sparkles-web-renderer',
-        'ytd-display-ad-renderer',
-        'ytd-video-masthead-ad-v3-renderer',
-        'ytd-companion-slot-renderer',
-        'ytd-promoted-video-renderer',
-        'ytd-banner-promo-renderer',
         '.ytp-ad-action-interstitial',
         '.ytp-ad-action-interstitial-slot',
-        'ytd-action-companion-ad-renderer',
         '.ytp-ad-interstitial-slot',
         '.ytp-ad-interstitial-overlay-container',
         '.ytp-ad-interstitial-logo-overlay',
@@ -38,18 +29,43 @@ function removeAllAds() {
         elements.forEach(el => el.remove());
     });
 
-    // Pular automaticamente vídeo de anúncio
     const skipButton = document.querySelector('.ytp-ad-skip-button');
     if (skipButton) {
         skipButton.click();
     }
+}
 
-    // Caso o vídeo seja um ad, tenta avançar
-    const video = document.querySelector('video');
-    if (video && video.duration > 0 && video.currentTime < 1) {
-        video.currentTime = video.duration;
+function handleAdPlayback() {
+    const player = document.querySelector('.html5-video-player');
+
+    if (!player) return;
+
+    const video = player.querySelector('video');
+
+    if (!video) return;
+
+    // Verifica se está mostrando anúncio
+    if (player.classList.contains('ad-showing')) {
+        console.log('Anúncio detectado: silenciando e pulando se possível.');
+
+        // Silencia o vídeo
+        video.muted = true;
+
+        // Se for um anúncio skippable, tenta pular
+        const skipButton = player.querySelector('.ytp-ad-skip-button');
+        if (skipButton) {
+            skipButton.click();
+        }
+    } else {
+        // Se não é anúncio, garante que o vídeo está com som
+        video.muted = false;
     }
 }
 
-// Roda a cada segundo para garantir a remoção contínua
-setInterval(removeAllAds, 1000);
+function mainBlocker() {
+    removeAdOverlays();
+    handleAdPlayback();
+}
+
+// Executa a cada 500ms para resposta rápida
+setInterval(mainBlocker, 500);
