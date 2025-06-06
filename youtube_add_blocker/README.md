@@ -2,7 +2,7 @@
 
 ## 🚫 Bloqueador de Anúncios do YouTube
 
-Esta é uma **extensão para navegador** que bloqueia anúncios no YouTube.  
+Esta é uma **extensão para navegador** que silencia os anúncios no YouTube e clica em sim para continuar ouvindo musica quando perguntado "se ainda quer continuar ouvindo?".  
 **Uso exclusivo e pessoal**.
 
 ---
@@ -25,16 +25,17 @@ Esta é uma **extensão para navegador** que bloqueia anúncios no YouTube.
 
 ## 📦 Recursos
 
-- Bloqueio de anúncios em vídeos do YouTube.
+- Silencia de anúncios em vídeos do YouTube.
 - Interface simples e leve.
 - Código aberto para aprendizado.
-
+- clica em sim para continuar ouvindo musica quando perguntado "se ainda quer continuar ouvindo?"
 ---
 
 ## 📢 Atenção
 
 - Não oferecemos suporte para uso indevido.
 - Respeite os termos de uso do YouTube.
+- Encontrei um meio etico para continaur a gerar renta para youtube, sem ter de ouvir os anuncios e nem para quando ele pergunta se ainda estou ouvindo
 
 ---
 
