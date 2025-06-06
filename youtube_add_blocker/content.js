@@ -62,6 +62,17 @@ function handleAdPlayback() {
     }
 }
 
+function autoConfirmStillWatching() {
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach(button => {
+        const text = button.textContent.trim().toLowerCase();
+        if (text.includes('continuar assistindo') || text === 'sim' || text === 'yes') {
+            console.log('Pop-up de inatividade detectado — clicando automaticamente.');
+            button.click();
+        }
+    });
+}
+
 function mainBlocker() {
     removeAdOverlays();
     handleAdPlayback();
