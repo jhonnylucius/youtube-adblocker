@@ -76,6 +76,7 @@ function autoConfirmStillWatching() {
 function mainBlocker() {
     removeAdOverlays();
     handleAdPlayback();
+    autoConfirmStillWatching();
 }
 
 // Executa a cada 500ms para resposta rápida
