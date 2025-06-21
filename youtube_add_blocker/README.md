@@ -17,9 +17,12 @@ Esta é uma **extensão para navegador** que silencia os anúncios no YouTube e 
 
 ## 🛠️ Como usar
 
-1. **Clone ou baixe** este repositório.
-2. Siga as instruções de instalação no seu navegador.
-3. Aproveite o YouTube sem anúncios!
+### **Como instalar a extensão no Chrome (modo desenvolvedor):**
+
+1. Acesse `chrome://extensions/`.
+2. Ative o "Modo do desenvolvedor".
+3. Clique em "Carregar sem compactação".
+4. Selecione a pasta onde está sua extensão.
 
 ---
 
