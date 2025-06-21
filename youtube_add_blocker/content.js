@@ -79,5 +79,5 @@ function mainBlocker() {
     autoConfirmStillWatching();
 }
 
-// Executa a cada 500ms para resposta rápida
-setInterval(mainBlocker, 500);
+// Executa a cada 2000ms para resposta rápida
+setInterval(mainBlocker, 10000);
