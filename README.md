@@ -37,7 +37,7 @@ Esta é uma **extensão para navegador** que silencia os anúncios no YouTube e 
 
 - Não oferecemos suporte para uso indevido.
 - Respeite os termos de uso do YouTube.
-- Encontrei um meio etico para continaur a gerar renta para youtube, sem ter de ouvir os anuncios e nem para quando ele pergunta se ainda estou ouvindo
+- Encontrei um meio etico para continaur a gerar renDa para youtube, sem ter de ouvir os anuncios e nem para quando ele pergunta se ainda estou ouvindo
 
 ---
 
